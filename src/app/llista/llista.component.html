@@ -1,0 +1,32 @@
+
+<div class="container">
+    <p></p>
+    <div style="border: solid; text-align: center; width: 600px; margin: auto; border-color: blue;">
+      <h1>Llista de Clients</h1>
+
+      <table *ngIf="llista != null" style="border: solid;">
+          <thead><th style="width: 30%;">Nom</th>
+              <th style="width: 30%;">CIF</th>
+              <th style="width: 30%;">Direccio</th>
+              <th style="width: 10%;">Grup</th></thead>
+          <tbody>
+
+              <tr *ngFor="let client of llista" style="border: solid;">
+                  <td>
+                    {{client.nom}}
+                  </td>
+                  <td>
+                      {{client.cif}}
+                  </td>
+                  <td>
+                      {{client.direccio}}
+                  </td>
+                  <td>
+                      {{client.grup}}
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </div>
+
